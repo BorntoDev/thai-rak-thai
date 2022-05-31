@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>🇹🇭 ไทยแลนด์สู้เว้ยยยย</title>
+        <script>
+            var thaiNumber =["๐","๑","๒","๓","๔","๕","๖","๗","๘","๙"];
+
+            function convertNumberToThai(){
+                var originalText = document.getElementById("original").value;
+                var i = 0;
+                thaiNumber.forEach(element => {
+                    originalText = originalText.replace(new RegExp(i, 'g'), element);
+                    i++;
+                });
+                document.getElementById("converted").value = originalText;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>🇹🇭 แปลงเลขไทยง่าย ๆ เพื่ออนุรักษ์วัฒนธรรมแบบสุด ๆ</h1>
+            <textarea id="original" oninput="convertNumberToThai()" rows="30" cols="50"></textarea>
+            <textarea id="converted" disabled rows="30" cols="50"></textarea>
+        </center>
+    </body>
+</html>
