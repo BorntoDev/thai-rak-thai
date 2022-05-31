@@ -6,13 +6,15 @@
             var thaiNumber =["๐","๑","๒","๓","๔","๕","๖","๗","๘","๙"];
 
             function convertNumberToThai(){
-                var originalText = document.getElementById("original").value;
+                document.getElementById("original").value = document.getElementById("original").value.replace(/[A-zぁ-んァ-ン！：／]/g, '');
+                var originalText = document.getElementById("original").value
                 var i = 0;
                 thaiNumber.forEach(element => {
-                    originalText = originalText.replace(new RegExp(i, 'g'), element);
-                    i++;
+                    originalText = originalText.replace(new RegExp(i, 'g'), element)
+                    i++
                 });
-                document.getElementById("converted").value = originalText;
+                
+                document.getElementById("converted").value = originalText
             }
             
         </script>
