@@ -7,10 +7,8 @@
 
             function convertNumberToThai(){
                 var originalText = document.getElementById("original").value;
-                var i = 0;
-                thaiNumber.forEach(element => {
+                thaiNumber.forEach((element,i) => {
                     originalText = originalText.replace(new RegExp(i, 'g'), element);
-                    i++;
                 });
                 document.getElementById("converted").value = originalText;
             }
